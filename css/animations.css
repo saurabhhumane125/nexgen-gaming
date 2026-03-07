@@ -227,3 +227,227 @@
 main {
     animation: pageEntrance 0.8s ease-out 0.3s both;
 }
+
+/* ========== LOOP ANIMATIONS — Keep users engaged ========== */
+
+/* --- 1. Floating Bob (icon-boxes, badge) --- */
+@keyframes floatBob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.icon-box {
+    animation: floatBob 3s ease-in-out infinite;
+}
+
+/* Stagger the cards so they bob at different times */
+.setup-card:nth-child(2) .icon-box,
+.feature-card:nth-child(2) .icon-box {
+    animation-delay: 0.4s;
+}
+
+.setup-card:nth-child(3) .icon-box,
+.feature-card:nth-child(3) .icon-box {
+    animation-delay: 0.8s;
+}
+
+.setup-card:nth-child(4) .icon-box,
+.feature-card:nth-child(4) .icon-box {
+    animation-delay: 1.2s;
+}
+
+.setup-card:nth-child(5) .icon-box {
+    animation-delay: 1.6s;
+}
+
+.setup-card:nth-child(6) .icon-box {
+    animation-delay: 2.0s;
+}
+
+/* --- 2. Pulsing Glow on CTA Buttons --- */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.3), 0 0 30px rgba(123, 60, 255, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.6), 0 0 50px rgba(123, 60, 255, 0.3);
+    }
+}
+
+.btn-primary {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* --- 3. Shimmer Sweep on Section Titles --- */
+@keyframes shimmerSweep {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.section-title {
+    background: linear-gradient(90deg,
+            var(--text-primary) 0%,
+            var(--text-primary) 40%,
+            var(--accent-primary) 50%,
+            var(--text-primary) 60%,
+            var(--text-primary) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerSweep 4s linear infinite;
+}
+
+/* --- 4. Gentle Float on Stat Numbers --- */
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-5px) scale(1.03);
+    }
+}
+
+.stat-number {
+    display: inline-block;
+    animation: gentleFloat 2.5s ease-in-out infinite;
+}
+
+.stat-item:nth-child(2) .stat-number {
+    animation-delay: 0.3s;
+}
+
+.stat-item:nth-child(3) .stat-number {
+    animation-delay: 0.6s;
+}
+
+.stat-item:nth-child(4) .stat-number {
+    animation-delay: 0.9s;
+}
+
+/* --- 5. Rotating Gradient Border on Cards --- */
+@keyframes borderRotate {
+    0% {
+        --border-angle: 0deg;
+    }
+
+    100% {
+        --border-angle: 360deg;
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.game-card,
+.pricing-card,
+.testimonial-card {
+    border: 1px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image:
+        linear-gradient(var(--bg-surface), var(--bg-surface)),
+        conic-gradient(from var(--border-angle), transparent 30%, var(--accent-primary) 50%, var(--highlight) 55%, transparent 70%);
+    animation: borderRotate 4s linear infinite;
+}
+
+/* --- 6. Soft Breathe on Hero Badge --- */
+@keyframes badgeBreathe {
+
+    0%,
+    100% {
+        opacity: 0.85;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+}
+
+.badge {
+    animation: badgeBreathe 3s ease-in-out infinite;
+}
+
+/* --- 7. Background Floating Particles --- */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    opacity: 0;
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20vh) scale(1);
+    }
+}
+
+/* --- 8. Scroll Top Button Pulse --- */
+.scroll-top-btn.visible {
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* --- Disable heavy loop animations on mobile for performance --- */
+@media (hover: none) {
+
+    .icon-box,
+    .badge,
+    .stat-number {
+        animation: none !important;
+    }
+
+    .particles-container {
+        display: none !important;
+    }
+}
