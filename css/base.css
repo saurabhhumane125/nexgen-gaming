@@ -37,10 +37,13 @@ html {
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.5;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -298,5 +301,27 @@ h3 {
 
     .container {
         max-width: 1200px;
+    }
+}
+
+/* ========== Mobile Optimization (375px & below) ========== */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .section-spacing {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .btn-lg {
+        height: 48px;
+        padding: 0 var(--spacing-md);
+        font-size: 16px;
     }
 }

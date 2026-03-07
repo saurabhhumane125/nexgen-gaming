@@ -836,3 +836,97 @@
         height: 180px;
     }
 }
+
+/* ========== Mobile Optimization (375px & below) ========== */
+@media (max-width: 767px) {
+
+    /* Convert grids to horizontal scroll to save massive vertical space */
+    .games-grid,
+    .setup-grid,
+    .stats-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: var(--spacing-sm);
+        gap: var(--spacing-md);
+        /* Hide scrollbar for cleaner look */
+        scrollbar-width: none;
+    }
+
+    .games-grid::-webkit-scrollbar,
+    .setup-grid::-webkit-scrollbar,
+    .stats-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .game-card,
+    .setup-card {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        min-width: 80vw;
+    }
+
+    .stat-item {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        min-width: 60vw;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-md);
+        background: var(--bg-surface);
+    }
+}
+
+@media (max-width: 400px) {
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .trust-signals li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .feature-card {
+        min-width: 260px;
+        padding: var(--spacing-md);
+    }
+
+    .feature-card .stat {
+        font-size: 24px;
+    }
+
+    .stat-item {
+        padding: var(--spacing-sm);
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-plus {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .game-title {
+        font-size: 14px;
+    }
+
+    .tag {
+        font-size: 10px;
+    }
+}
