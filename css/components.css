@@ -842,8 +842,7 @@
 
     /* Convert grids to horizontal scroll to save massive vertical space */
     .games-grid,
-    .setup-grid,
-    .stats-grid {
+    .setup-grid {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -855,25 +854,19 @@
     }
 
     .games-grid::-webkit-scrollbar,
-    .setup-grid::-webkit-scrollbar,
-    .stats-grid::-webkit-scrollbar {
+    .setup-grid::-webkit-scrollbar {
         display: none;
     }
 
     .game-card,
     .setup-card {
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         flex-shrink: 0;
-        min-width: 80vw;
+        min-width: 90vw;
     }
 
-    .stat-item {
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        min-width: 60vw;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: var(--radius-md);
-        background: var(--bg-surface);
+    .game-img-box {
+        height: 220px;
     }
 }
 
