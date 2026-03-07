@@ -1,0 +1,229 @@
+/* 
+    NexGen Gaming Lounge - Animations
+    Custom cursor, glitch, tilt, fade-up effects.
+*/
+
+/* ========== Custom Cursor ========== */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-primary);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(0, 229, 255, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursor-outline.hover {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 229, 255, 0.1);
+    border-color: var(--highlight);
+}
+
+/* Desktop only cursor */
+@media (hover: hover) {
+    body {
+        cursor: none;
+    }
+
+    a,
+    button {
+        cursor: none;
+    }
+}
+
+@media (hover: none) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+/* ========== Global Fade Up ========== */
+.gsap-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gsap-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== Glitch Text Effect ========== */
+.glitch-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-hover:hover::before,
+.glitch-hover:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-surface-dark);
+}
+
+.glitch-hover:hover::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--highlight);
+    clip-path: inset(44% 0 56% 0);
+    animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.glitch-hover:hover::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--accent-primary);
+    clip-path: inset(56% 0 44% 0);
+    animation: glitch-anim2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite backwards;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translate(-2px, 1px);
+    }
+
+    20% {
+        clip-path: inset(10% 0 60% 0);
+        transform: translate(2px, -1px);
+    }
+
+    40% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        clip-path: inset(5% 0 80% 0);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        clip-path: inset(90% 0 5% 0);
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        clip-path: inset(30% 0 50% 0);
+        transform: translate(1px, 2px);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip-path: inset(5% 0 80% 0);
+        transform: translate(2px, -1px);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+        transform: translate(-2px, 1px);
+    }
+
+    40% {
+        clip-path: inset(30% 0 50% 0);
+        transform: translate(2px, 2px);
+    }
+
+    60% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translate(-2px, -2px);
+    }
+
+    80% {
+        clip-path: inset(5% 0 90% 0);
+        transform: translate(1px, 1px);
+    }
+
+    100% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(-1px, -2px);
+    }
+}
+
+/* ========== 3D Tilt Card ========== */
+.tilt-card {
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.tilt-card .game-info {
+    transform: translateZ(40px);
+}
+
+/* ========== Scroll To Top Button ========== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.4);
+    cursor: pointer;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    box-shadow: 0 4px 30px rgba(123, 60, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* ========== Page Entrance Animation ========== */
+@keyframes pageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: pageEntrance 0.8s ease-out 0.3s both;
+}

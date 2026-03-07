@@ -1,0 +1,302 @@
+/* 
+    NexGen Gaming Lounge - Base & Reset Styles
+    Resets, typography, layout primitives, utilities.
+*/
+
+/* Lenis Smooth Scroll Global Overrides */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a,
+button {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 34px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* Layout & Containers */
+.container {
+    width: 100%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin: 0 auto;
+}
+
+.section-spacing {
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+.bg-dark {
+    background-color: var(--bg-primary);
+}
+
+.bg-surface-dark {
+    background-color: var(--bg-surface);
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--accent-primary);
+}
+
+.text-green {
+    color: var(--highlight);
+}
+
+.mb-8 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.mb-16 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-24 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mt-16 {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-24 {
+    margin-top: var(--spacing-md);
+}
+
+.mt-32 {
+    margin-top: var(--spacing-lg);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    height: var(--btn-height);
+    padding: 0 var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(123, 60, 255, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #000;
+}
+
+.btn-whatsapp:hover {
+    background: #1EBE5C;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    height: 56px;
+    padding: 0 var(--spacing-lg);
+    font-size: 18px;
+}
+
+/* Section Headers */
+.section-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.text-center .section-title::after,
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Card Globals */
+.game-card,
+.setup-card,
+.pricing-card,
+.testimonial-card,
+.info-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ========== Responsive Desktop (768px+) ========== */
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 32px;
+        --btn-height: 52px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+}

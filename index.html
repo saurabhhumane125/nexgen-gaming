@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen | Premium Esports Gaming Lounge</title>
+    <meta name="description"
+        content="Play PS5 and high-performance gaming PCs with friends in our premium gaming lounge. Book your gaming slot online instantly.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="logo mb-24 inline-flex" style="justify-content:center; width:100%;">
+                <i class="ph-fill ph-game-controller text-accent" style="font-size:28px;"></i>
+                <span
+                    style="font-size:22px; font-family:var(--font-heading); letter-spacing:3px; color:var(--text-primary); margin-left:8px;">NEXGEN</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div id="progress-text" class="progress-text">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-game-controller"></i>
+                <span>NEXGEN</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#home" class="magnetic">Home</a>
+                <a href="#games" class="magnetic">Games</a>
+                <a href="#setup" class="magnetic">Setup</a>
+                <a href="#pricing" class="magnetic">Pricing</a>
+                <a href="#gallery" class="magnetic">Gallery</a>
+                <a href="#contact" class="magnetic">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#book" class="btn btn-primary nav-book-btn magnetic">Book Slot</a>
+                <button class="mobile-menu-btn" id="menu-btn" aria-label="Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="#home" class="mobile-link">Home</a>
+                <a href="#games" class="mobile-link">Games</a>
+                <a href="#setup" class="mobile-link">Setup</a>
+                <a href="#pricing" class="mobile-link">Pricing</a>
+                <a href="#gallery" class="mobile-link">Gallery</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+                <a href="#book" class="btn btn-primary w-full text-center mt-32">Book Slot</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section id="home" class="hero-section relative"
+            style="background-image: url('assets/images/hero_bg.png'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center;">
+            <div class="hero-overlay"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(11, 11, 15, 0.9) 0%, rgba(11, 11, 15, 0.6) 50%, rgba(11, 11, 15, 0.3) 100%); z-index: 1;">
+            </div>
+
+            <!-- Content -->
+            <div class="hero-content-wrapper" style="position: relative; z-index: 2; padding-top: 64px; width: 100%;">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <div class="badge fade-element">
+                            <i class="ph-fill ph-lightning"></i>
+                            <span>Premium Esports & Console Lounge</span>
+                        </div>
+                        <h1 class="hero-title fade-element">Where Gamers<br><span class="text-gradient">Level Up</span>
+                        </h1>
+                        <p class="hero-subtitle fade-element">Walk in with your squad. Play on RTX 40-series PCs and PS5
+                            consoles with 240Hz monitors, zero-lag fiber internet, and ergonomic setups — all at hourly
+                            rates.</p>
+
+                        <ul class="trust-signals fade-element">
+                            <li><i class="ph-fill ph-check-circle"></i> For competitive esports squads</li>
+                            <li><i class="ph-fill ph-check-circle"></i> For casual FIFA & GTA groups</li>
+                            <li><i class="ph-fill ph-check-circle"></i> For tournament organizers</li>
+                        </ul>
+
+                        <div class="hero-actions fade-element">
+                            <a href="#book" class="btn btn-primary btn-lg magnetic">
+                                <i class="ph-bold ph-calendar-plus"></i>
+                                Book Your Slot
+                            </a>
+                            <a href="#games" class="btn btn-secondary btn-lg magnetic">
+                                View Games
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHY CHOOSE US (Horizontal Scroll) ==================== -->
+        <section class="why-choose-section">
+            <div class="why-choose-container">
+                <div class="why-choose-header text-center">
+                    <h2 class="section-title text-center glitch-hover" data-text="Why Choose NexGen?">Why Choose NexGen?
+                    </h2>
+                    <p class="section-subtitle mt-16">Everything you need for the ultimate gaming session, under one
+                        roof.</p>
+                </div>
+
+                <div class="horizontal-track">
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-cpu"></i></div>
+                        <h3>RTX 40-Series PCs</h3>
+                        <p>Every rig runs an NVIDIA RTX 4070+ GPU, Intel Core i9, 32GB RAM, and NVMe SSDs. Zero
+                            stuttering, zero excuses.</p>
+                        <span class="stat">240 FPS</span>
+                    </div>
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-monitor"></i></div>
+                        <h3>240Hz Monitors</h3>
+                        <p>See every frame before your opponent. Our 27" 240Hz IPS displays give you a real competitive
+                            edge in ranked matches.</p>
+                        <span class="stat">0.5ms</span>
+                    </div>
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-playstation-logo"></i></div>
+                        <h3>PlayStation 5 Stations</h3>
+                        <p>Immersive 4K gaming on 65" OLED TVs with the latest titles and DualSense Edge controllers.
+                            Perfect for FIFA nights.</p>
+                        <span class="stat">4K 120Hz</span>
+                    </div>
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-wifi-high"></i></div>
+                        <h3>Zero-Lag Fiber</h3>
+                        <p>Dedicated 1Gbps fiber with enterprise-grade networking. Your ping stays under 5ms to Mumbai
+                            and Singapore servers.</p>
+                        <span class="stat">&lt;5ms</span>
+                    </div>
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-users-three"></i></div>
+                        <h3>Private Squad Rooms</h3>
+                        <p>Book a private AC room for your 5-stack. LAN party vibes with soundproofing, RGB ambience,
+                            and snack service.</p>
+                        <span class="stat">5+ Players</span>
+                    </div>
+                    <div class="feature-card gsap-fade-up">
+                        <div class="icon-box"><i class="ph ph-armchair"></i></div>
+                        <h3>Ergonomic Comfort</h3>
+                        <p>Premium gaming chairs with lumbar support, adjustable armrests, and headrests for marathon
+                            sessions without fatigue.</p>
+                        <span class="stat">8hr Comfort</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== POPULAR GAMES ==================== -->
+        <section id="games" class="games section-spacing bg-surface-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Popular Games">Popular Games</h2>
+                    <p class="section-subtitle mt-16">Jump into the most competitive and immersive worlds.</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card parallax-item gsap-fade-up tilt-card" data-speed="1.1">
+                        <div class="game-img-box cod-bg"></div>
+                        <div class="game-info">
+                            <h3 class="game-title">Call of Duty</h3>
+                            <div class="platform-tags">
+                                <span class="tag"><i class="ph-fill ph-desktop"></i> PC</span>
+                                <span class="tag"><i class="ph-fill ph-playstation-logo"></i> PS5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card parallax-item gsap-fade-up tilt-card" data-speed="0.9">
+                        <div class="game-img-box fifa-bg"></div>
+                        <div class="game-info">
+                            <h3 class="game-title">EA FC / FIFA</h3>
+                            <div class="platform-tags">
+                                <span class="tag"><i class="ph-fill ph-playstation-logo"></i> PS5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card parallax-item gsap-fade-up tilt-card" data-speed="1.15">
+                        <div class="game-img-box gta-bg"></div>
+                        <div class="game-info">
+                            <h3 class="game-title">GTA V</h3>
+                            <div class="platform-tags">
+                                <span class="tag"><i class="ph-fill ph-desktop"></i> PC</span>
+                                <span class="tag"><i class="ph-fill ph-playstation-logo"></i> PS5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card parallax-item gsap-fade-up tilt-card" data-speed="0.85">
+                        <div class="game-img-box val-bg"></div>
+                        <div class="game-info">
+                            <h3 class="game-title">Valorant</h3>
+                            <div class="platform-tags">
+                                <span class="tag"><i class="ph-fill ph-desktop"></i> PC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SETUP ==================== -->
+        <section id="setup" class="setup section-spacing bg-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Our Gaming Setup">Our Gaming Setup</h2>
+                    <p class="section-subtitle mt-16">Experience peak performance with our cutting-edge hardware.</p>
+                </div>
+
+                <div class="setup-grid">
+                    <div class="setup-card parallax-item gsap-fade-up" data-speed="0.9">
+                        <div class="icon-box"><i class="ph ph-cpu"></i></div>
+                        <h3 class="setup-title">High-End Gaming PCs</h3>
+                        <p class="setup-desc">RTX 40-series graphics, Intel Core i9, and 240Hz fast refresh monitors for
+                            competitive advantage.</p>
+                    </div>
+                    <div class="setup-card parallax-item gsap-fade-up" data-speed="1.1">
+                        <div class="icon-box"><i class="ph ph-playstation-logo"></i></div>
+                        <h3 class="setup-title">PlayStation 5 Stations</h3>
+                        <p class="setup-desc">Immersive 4K gaming with the latest console titles and DualSense edge
+                            controllers.</p>
+                    </div>
+                    <div class="setup-card parallax-item gsap-fade-up" data-speed="0.85">
+                        <div class="icon-box"><i class="ph ph-users-three"></i></div>
+                        <h3 class="setup-title">Multiplayer Zones</h3>
+                        <p class="setup-desc">Dedicated private rooms and adjacent setups so you can play and
+                            communicate with friends.</p>
+                    </div>
+                    <div class="setup-card parallax-item gsap-fade-up" data-speed="1.15">
+                        <div class="icon-box"><i class="ph ph-armchair"></i></div>
+                        <h3 class="setup-title">Comfort Gaming Chairs</h3>
+                        <p class="setup-desc">Ergonomic premium chairs designed to support you during those marathon
+                            gaming sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PRICING ==================== -->
+        <section id="pricing" class="pricing section-spacing bg-surface-dark relative">
+            <div class="ambient-glow bg-left"></div>
+            <div class="container relative z-10">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Gaming Prices">Gaming Prices</h2>
+                    <p class="section-subtitle mt-16">Transparent hourly rates. Grab your slot now.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card gsap-fade-up">
+                        <div class="card-header">
+                            <i class="ph ph-desktop text-accent"
+                                style="font-size:28px; margin-bottom:16px; display:inline-block;"></i>
+                            <h3>PC Gaming</h3>
+                            <div class="price">₹100<span>/ hour</span></div>
+                        </div>
+                        <ul class="features">
+                            <li><i class="ph-bold ph-check"></i> High-End RTX Rig</li>
+                            <li><i class="ph-bold ph-check"></i> 144Hz+ Monitor</li>
+                            <li><i class="ph-bold ph-check"></i> Mech Keyboard & Mouse</li>
+                        </ul>
+                        <a href="#book" class="btn btn-secondary w-full select-plan magnetic" data-type="PC">Book
+                            Now</a>
+                    </div>
+
+                    <div class="pricing-card popular gsap-fade-up" style="transition-delay: 100ms;">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="card-header">
+                            <i class="ph ph-playstation-logo text-accent"
+                                style="font-size:28px; margin-bottom:16px; display:inline-block;"></i>
+                            <h3>PS5 Gaming</h3>
+                            <div class="price">₹150<span>/ hour</span></div>
+                        </div>
+                        <ul class="features">
+                            <li><i class="ph-bold ph-check"></i> PlayStation 5 Console</li>
+                            <li><i class="ph-bold ph-check"></i> 4K 65" OLED TV</li>
+                            <li><i class="ph-bold ph-check"></i> 2 DualSense Controllers</li>
+                        </ul>
+                        <a href="#book" class="btn btn-primary w-full select-plan magnetic" data-type="PS5">Book Now</a>
+                    </div>
+
+                    <div class="pricing-card gsap-fade-up" style="transition-delay: 200ms;">
+                        <div class="card-header">
+                            <i class="ph ph-users-three text-accent"
+                                style="font-size:28px; margin-bottom:16px; display:inline-block;"></i>
+                            <h3>Multiplayer Room</h3>
+                            <div class="price">₹300<span>/ hour</span></div>
+                        </div>
+                        <ul class="features">
+                            <li><i class="ph-bold ph-check"></i> Private AC Room</li>
+                            <li><i class="ph-bold ph-check"></i> Mixed PC & PS5 Setup</li>
+                            <li><i class="ph-bold ph-check"></i> Upto 4 Players included</li>
+                        </ul>
+                        <a href="#book" class="btn btn-secondary w-full select-plan magnetic"
+                            data-type="Multiplayer">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BOOKING ==================== -->
+        <section id="book" class="booking section-spacing bg-dark relative">
+            <div class="ambient-glow bg-right"></div>
+            <div class="container relative z-10">
+                <div class="booking-wrapper form-glow-border">
+                    <div class="booking-info">
+                        <h2 class="section-title">Book Your Slot</h2>
+                        <p class="section-subtitle">Reserve your gaming station in advance and skip the waiting line.
+                        </p>
+
+                        <div class="contact-highlights mt-32">
+                            <div class="highlight-item">
+                                <i class="ph-fill ph-whatsapp-logo text-green"></i>
+                                <div>
+                                    <h4>Instant Confirmation</h4>
+                                    <p>Get booking details on WhatsApp.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item mt-16">
+                                <i class="ph-fill ph-clock text-accent"></i>
+                                <div>
+                                    <h4>Flexible Times</h4>
+                                    <p>Select any available hourly slot.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-container">
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" required placeholder="John Doe">
+                                </div>
+                                <div class="input-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" required placeholder="+91 98765 43210">
+                                </div>
+                                <div class="input-group">
+                                    <label for="platform">Gaming Platform</label>
+                                    <select id="platform" required>
+                                        <option value="" disabled selected>Select Platform</option>
+                                        <option value="PC">PC Gaming</option>
+                                        <option value="PS5">PS5 Gaming</option>
+                                        <option value="Multiplayer">Multiplayer Room</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="game">Preferred Game</label>
+                                    <select id="game" required>
+                                        <option value="" disabled selected>Select Game</option>
+                                        <option value="Valorant">Valorant</option>
+                                        <option value="CS2">CS:2</option>
+                                        <option value="GTA V">GTA V</option>
+                                        <option value="FIFA">EA FC / FIFA</option>
+                                        <option value="COD">Call of Duty</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="time">Time Slot</label>
+                                    <input type="time" id="time" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-full mt-24 magnetic">
+                                <i class="ph-bold ph-paper-plane-right"></i> Reserve Slot
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== GALLERY ==================== -->
+        <section id="gallery" class="gallery section-spacing bg-surface-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Inside NexGen">Inside NexGen</h2>
+                    <p class="section-subtitle mt-16">Glimpses of our premium esports and console zones.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <img src="assets/images/gallery_1.png" alt="Gaming Lounge Interior" class="gallery-img"
+                        loading="lazy">
+                    <img src="assets/images/gallery_2.png" alt="PS5 Gaming Zone" class="gallery-img" loading="lazy">
+                    <img src="assets/images/gallery_3.png" alt="RTX PC Rig" class="gallery-img" loading="lazy">
+                    <img src="assets/images/gallery_4.png" alt="Squad Room" class="gallery-img" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STATS COUNTER ==================== -->
+        <section class="stats-section bg-dark">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item gsap-fade-up">
+                        <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Happy Gamers</p>
+                    </div>
+                    <div class="stat-item gsap-fade-up">
+                        <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">RTX Gaming Rigs</p>
+                    </div>
+                    <div class="stat-item gsap-fade-up">
+                        <span class="stat-number" data-target="4.9">0</span><span class="stat-plus">★</span>
+                        <p class="stat-label">Google Rating</p>
+                    </div>
+                    <div class="stat-item gsap-fade-up">
+                        <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Games Available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIALS ==================== -->
+        <section class="testimonials section-spacing bg-dark" id="reviews">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Player Reviews">Player Reviews</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card gsap-fade-up">
+                        <div class="stars text-accent mb-12">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="review-text">"The PCs are insane. 0 lag on Valorant, and the 240Hz monitors are super
+                            smooth. Best gaming lounge so far."</p>
+                        <div class="user-info mt-16">
+                            <div class="avatar">R</div>
+                            <span class="user-name">Rahul S.</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card gsap-fade-up">
+                        <div class="stars text-accent mb-12">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="review-text">"Came here with friends to play FIFA on the PS5. The ambience is killer,
+                            really nice neon setup and comfy sofas."</p>
+                        <div class="user-info mt-16">
+                            <div class="avatar">A</div>
+                            <span class="user-name">Aditya K.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section id="contact" class="contact section-spacing bg-surface-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title glitch-hover" data-text="Visit Our Gaming Zone">Visit Our Gaming Zone</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <i class="ph-fill ph-map-pin"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>123 Cyber Street, Tech Hub, Neo City</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="ph-fill ph-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-actions mt-24">
+                            <a href="tel:+919876543210" class="btn btn-secondary flex-1">
+                                <i class="ph-bold ph-phone-call"></i> Call Now
+                            </a>
+                            <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp flex-1">
+                                <i class="ph-bold ph-whatsapp-logo"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-container glow-border">
+                        <div class="map-placeholder">
+                            <i class="ph-light ph-map-trifold"></i>
+                            <p>Interactive Map Embedded Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="ph-bold ph-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo mb-16 inline-flex">
+                    <i class="ph-fill ph-game-controller"></i>
+                    <span>NEXGEN</span>
+                </a>
+                <p class="text-secondary text-sm">The ultimate premium esports and console gaming lounge experience.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Business Info</h4>
+                <ul>
+                    <li class="text-sm text-secondary mb-8">123 Cyber Street, Tech Hub, Neo City</li>
+                    <li class="text-sm text-secondary">+91 98765 43210</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"
+            style="border-top: 1px solid rgba(255,255,255,0.05); max-width:1200px; margin:32px auto 0; padding:16px var(--container-padding); text-align:center; font-size:14px; color:var(--text-secondary);">
+            &copy; 2026 NexGen Gaming Lounge. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Modular JS (order matters) -->
+    <script src="js/scroll.js" defer></script>
+    <script src="js/interactions.js" defer></script>
+    <script src="js/ui.js" defer></script>
+</body>
+
+</html>

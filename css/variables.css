@@ -1,0 +1,38 @@
+/* 
+    NexGen Gaming Lounge - Design Tokens
+    All CSS custom properties (variables) live here.
+*/
+
+:root {
+    /* Color Palette */
+    --bg-primary: #0B0B0F;
+    --bg-surface: #15151C;
+    --bg-surface-dark: #15151C;
+    --accent-primary: #00E5FF;
+    --accent-secondary: #7B3CFF;
+    --highlight: #00FF9C;
+    --text-primary: #F5F5F7;
+    --text-secondary: #A0A0A8;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-hero: radial-gradient(circle at center, rgba(0, 229, 255, 0.2), transparent 60%);
+    --gradient-btn-hover: linear-gradient(135deg, var(--accent-secondary), var(--highlight));
+
+    /* Spacing System (8px grid) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+
+    /* Base Layout */
+    --container-padding: 16px;
+    --radius-md: 12px;
+    --btn-height: 48px;
+
+    /* Typography */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
