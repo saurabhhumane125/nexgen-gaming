@@ -858,11 +858,19 @@
         display: none;
     }
 
-    .game-card,
-    .setup-card {
+    .game-card {
         scroll-snap-align: center;
         flex-shrink: 0;
         min-width: 90vw;
+    }
+
+    .setup-card {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+        min-width: 85vw;
+        /* Almost full width on mobile */
+        padding: var(--spacing-xl) var(--spacing-md);
+        /* Increased padding for more length */
     }
 
     .game-img-box {
