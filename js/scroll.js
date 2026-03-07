@@ -63,26 +63,10 @@
         });
     });
 
-    // --- Horizontal Scroll ("Why Choose Us") ---
-    if (window.innerWidth >= 768) {
-        const section = document.querySelector('.why-choose-section');
-        const track = document.querySelector('.horizontal-track');
-        if (section && track) {
-            const scrollWidth = track.scrollWidth - window.innerWidth;
-            gsap.to(track, {
-                x: -scrollWidth,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: () => `+=${scrollWidth}`,
-                    scrub: 1,
-                    pin: true,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true
-                }
-            });
-        }
-    }
+    // --- "Why Choose Us" section now uses native CSS horizontal scroll ---
+    // No GSAP pinning needed — eliminates the black gap scroll glitch
+
+    // Clean up any stale ScrollTrigger pin-spacers from previous page loads
+    ScrollTrigger.refresh(true);
 
 })();
