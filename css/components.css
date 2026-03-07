@@ -848,7 +848,7 @@
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         padding-bottom: var(--spacing-sm);
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
         /* Hide scrollbar for cleaner look */
         scrollbar-width: none;
     }
@@ -858,23 +858,19 @@
         display: none;
     }
 
-    .game-card {
+    .game-card,
+    .setup-card {
         scroll-snap-align: center;
-        flex-shrink: 0;
-        min-width: 90vw;
+        flex: 0 0 100%;
+        /* Snap exactly 1 card to the container's width */
     }
 
     .setup-card {
-        scroll-snap-align: center;
-        flex-shrink: 0;
-        min-width: 85vw;
-        /* Almost full width on mobile */
-        padding: var(--spacing-xl) var(--spacing-md);
-        /* Increased padding for more length */
+        padding: var(--spacing-xxl) var(--spacing-md);
     }
 
     .game-img-box {
-        height: 220px;
+        height: 250px;
     }
 }
 
