@@ -62,7 +62,7 @@
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
-            const waNumber = "919876543210";
+            const waNumber = "918779663354";
             const message = `*New Booking Request - NexGen Lounge*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Platform:* ${platform}%0A*Game:* ${game}%0A*Date:* ${date}%0A*Time:* ${time}%0A%0A_Please confirm my slot._`;
             window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
             bookingForm.reset();
