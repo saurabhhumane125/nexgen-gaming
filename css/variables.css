@@ -8,15 +8,15 @@
     --bg-primary: #0B0B0F;
     --bg-surface: #15151C;
     --bg-surface-dark: #15151C;
-    --accent-primary: #00E5FF;
-    --accent-secondary: #7B3CFF;
-    --highlight: #00FF9C;
+    --accent-primary: #E32C2C;
+    --accent-secondary: #900000;
+    --highlight: #FF4D4D;
     --text-primary: #F5F5F7;
     --text-secondary: #A0A0A8;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    --gradient-hero: radial-gradient(circle at center, rgba(0, 229, 255, 0.2), transparent 60%);
+    --gradient-hero: radial-gradient(circle at center, rgba(227, 44, 44, 0.2), transparent 60%);
     --gradient-btn-hover: linear-gradient(135deg, var(--accent-secondary), var(--highlight));
 
     /* Spacing System (8px grid) */

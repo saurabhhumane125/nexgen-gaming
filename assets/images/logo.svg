@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- X Element -->
+  <g transform="translate(60, 45) rotate(45)" fill="#e32c2c">
+     <rect x="-35" y="-35" width="28" height="28" rx="3"/>
+     <rect x="7" y="-35" width="28" height="28" rx="3"/>
+     <rect x="-35" y="7" width="28" height="28" rx="3"/>
+     <rect x="7" y="7" width="28" height="28" rx="3"/>
+  </g>
+  <!-- First O Element -->
+  <rect x="139" y="15" width="60" height="60" rx="16" fill="none" stroke="#FFFFFF" stroke-width="16"/>
+  <!-- D Element -->
+  <path d="M 230 15 L 255 15 A 30 30 0 0 1 255 75 L 230 75 Z" fill="none" stroke="#e32c2c" stroke-width="16" stroke-linejoin="round"/>
+  <!-- Second O Element -->
+  <rect x="316" y="15" width="60" height="60" rx="16" fill="none" stroke="#FFFFFF" stroke-width="16"/>
+  
+  <!-- Subtitle -->
+  <text x="194" y="112" font-family="'Orbitron', 'Inter', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="10" text-anchor="middle">THE GAMING BAY</text>
+</svg>
